@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors({
-    origin: 'https://your-frontend-url.vercel.app',
+    origin: 'https://todo-sumesh-bawarias-projects.vercel.app',
     credentials: true
 }));
 
