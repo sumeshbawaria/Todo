@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import TodoContainer from './todoContainer';
 import { useGlobalContext } from '../context/globalContext.jsx'
 
@@ -7,7 +6,7 @@ import { useGlobalContext } from '../context/globalContext.jsx'
 function AllTodo() {
     const {fetchTodoLists, todoLists} = useGlobalContext();
 
-    useEffect(()=>{
+    useEffect(()=>{        
         fetchTodoLists();
     },[fetchTodoLists])
 
