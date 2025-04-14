@@ -38,7 +38,7 @@ function TodoContainer({todo}) {
 
     const gettingTodo = async(todo) => {
         try {
-            const response = await axios.get(`https://todofullstack-f83z.onrender.com/api/fetchTodos`,
+            const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/fetchTodos`,
                 {params: {id:todo}}
             )
             setTodos(response.data);

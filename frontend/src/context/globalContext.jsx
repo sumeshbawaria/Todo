@@ -8,6 +8,8 @@ export const GlobalTodoProvider = ({ children }) => {
     const fetchTodoLists = useCallback(async () => {
         try {
             const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/fetchTodoLists`);
+            console.log(response.data);
+            
             setTodoLists(response.data);
         } catch (error) {
             console.error("Error in fetching Todo list: ", error);

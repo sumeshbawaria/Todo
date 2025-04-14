@@ -11,7 +11,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(cors({
-    origin: 'https://todo-sumesh-bawarias-projects.vercel.app',
+    origin: `${process.env.CORS_ORIGIN}`,
     credentials: true
 }));
 
